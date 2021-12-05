@@ -1,10 +1,8 @@
-import './App.css';
+import Topbar from "./components/Topbar/Topbar";
 
 function App() {
   return (
-    <div >
-     dssdsdds
-    </div>
+    <Topbar />
   );
 }
 
