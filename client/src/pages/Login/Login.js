@@ -8,7 +8,7 @@ import axios from "axios";
 const Login = () => {
     const userRef = useRef();
     const passwordRef = useRef();
-    const {user, dispatch, isFetching } = useContext(Context)
+    const { dispatch, isFetching } = useContext(Context)
 
 
     const handleSubmit = async (e) => {
@@ -45,7 +45,7 @@ const Login = () => {
                     placeholder="Enter your password..."
                     ref={passwordRef}
                 />
-                <button className="loginButton" type="submit">Login</button>
+                <button className="loginButton" type="submit" disabled={isFetching}>Login</button>
             </form>
             <button className="loginRegisterButton">
                 <Link className="link" to="/register">
