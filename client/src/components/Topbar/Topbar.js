@@ -8,7 +8,7 @@ const Topbar = () => {
 
 
     const handleLogout = () => {
-        dispatch({ type: "LOGOUT" })    
+        dispatch({ type: "LOGOUT" })
     }
 
 
@@ -41,7 +41,13 @@ const Topbar = () => {
             </div>
             <div className="topRight">
                 {user ? (
-                    <img src={user.profilePic} alt="" className="topImg" />
+                    <Link to="/settings">
+                        <img
+                            src={user.profilePic}
+                            alt=""
+                            className="topImg"
+                        />
+                    </Link>
                 ) : (
                     <ul className="topList">
                         <li className="topListItem">
