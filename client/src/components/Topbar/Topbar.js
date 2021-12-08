@@ -4,8 +4,12 @@ import { useContext } from "react";
 import { Context } from "../../context/Context";
 
 const Topbar = () => {
-    const { user } = useContext(Context);
+    const { user, dispatch } = useContext(Context);
 
+
+    const handleLogout = () => {
+        dispatch({ type: "LOGOUT" })    
+    }
 
 
     return (
@@ -30,8 +34,8 @@ const Topbar = () => {
                     <li className="topListItem">
                         <Link className="link" to="/write">WRITE</Link>
                     </li>
-                    <li className="topListItem">
-                        {user && <Link className="link" to="/logout">LOGOUT</Link>}
+                    <li className="topListItem" onClick={handleLogout}>
+                        {user && "LOGOUT"}
                     </li>
                 </ul>
             </div>
