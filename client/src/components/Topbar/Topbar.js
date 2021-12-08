@@ -5,6 +5,8 @@ import { Context } from "../../context/Context";
 
 const Topbar = () => {
     const { user, dispatch } = useContext(Context);
+    const PF = "http://localhost:5000/images/";
+
 
 
     const handleLogout = () => {
@@ -43,7 +45,7 @@ const Topbar = () => {
                 {user ? (
                     <Link to="/settings">
                         <img
-                            src={user.profilePic}
+                            src={user.profilePic ? PF + user.profilePic : PF + "noAvatar.png"}
                             alt=""
                             className="topImg"
                         />
