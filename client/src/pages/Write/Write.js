@@ -30,7 +30,7 @@ const Write = () => {
         }
         try {
             const res = await axios.post("/posts", newPost);
-            window.location.replace("/post" + res.data._id)
+            window.location.replace("/post/" + res.data._id)
         } catch (error) {
             console.log(error)
         }
