@@ -60,7 +60,8 @@ const Settings = () => {
                 <form className="settingsForm" onSubmit={handleSubmit}>
                     <label>Profile Picture</label>
                     <div className="settingsPP">
-                        <img src={file ? URL.createObjectURL(file) : PF + user.profilePic} alt="" />
+                        {/* <img src={file ? URL.createObjectURL(file) : PF + user.profilePic} alt="" /> */}
+                        <img src={user.profilePic ? PF + user.profilePic : PF + "noAvatar.png"} alt="" />
                         <label htmlFor="fileInput">
                             <i className="settingsPPIcon far fa-user-circle"></i>
                         </label>
