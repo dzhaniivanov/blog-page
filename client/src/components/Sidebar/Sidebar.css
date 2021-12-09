@@ -43,6 +43,8 @@
 .sidebarList {
   list-style: none;
   margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .sidebarListItem {
@@ -50,6 +52,7 @@
   width: 50%;
   margin-top: 15px;
   cursor: pointer;
+  margin-left: 5px;
 }
 
 .sidebarSocial {
